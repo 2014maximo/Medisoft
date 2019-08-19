@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+:root {
+    --color-uno: #333;
+    --font-one: 'Open Sans';
+    }
+
+.backg{
+    background:url(../img/trigal.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body.backadmin{
+    background: url(../img/administrador.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+.font-one{
+    font-family: var(--font-one) !important;
+}
+.c-pointer{
+    cursor: pointer;
+}
+a.c-pointer:hover{
+    background-color: #d6b469;
+    color:white !important;
+}

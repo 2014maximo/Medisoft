@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="../js/bootstrap.min.js"></script>
+</head>
+<body class="backadmin pt-5">
+    <header class="fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#"><img src="../img/logo.png" width="100" height="auto"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto font-one">
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Empleados</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item c-pointer" data-toggle="modal" data-target=".listar_empleado">Lista de empleados</a>
+                            <a class="dropdown-item c-pointer" data-toggle="modal" data-target=".agregar_empleado">Agregar empleados</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Pacientes</a>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item c-pointer" href="#">Listar pacientes</a>
+                            <a class="dropdown-item" href="#">Agregar pacientes</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                          </div>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search">
+                        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Buscar</button>
+                      </form>
+                    </div>
+                  </nav>
+    </header><!-- fin header -->
+
+    <h1 class="text-center mt-5">ADMINISTRADOR</h1>
+
+    <div class="modal fade agregar_empleado" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center" id="exampleModalScrollableTitle">INGRESO DE EMPLEADOS</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div><!-- fin header modal -->
+          <div class="row backadmin">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <form class="shadow-lg p-5"action="">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-6">
+                          <select class="custom-select">
+                              <option selected>Tipo documento</option>
+                              <option value="1">Cédula</option>
+                              <option value="2">Cédula de extranjería</option>
+                              <option value="3">Tarjeta de identidad</option>
+                            </select>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Documento">
+                            </div>    
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Apellido">
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                            <select class="custom-select">
+                                <option selected>Estado civil</option>
+                                <option value="1">Soltero</option>
+                                <option value="2">Casado</option>
+                                <option value="3">Unión libre</option>
+                            </select>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <select class="custom-select">
+                              <option selected>Género</option>
+                              <option value="1">Masculino</option>
+                              <option value="2">Femenino</option>
+                              <option value="3">Extragenero</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Teléfono">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Email">
+                    </div>
+      
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Dirección">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="País">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Departamento">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Rol">
+                        </div>
+                  </div>
+                </div>
+      
+                <button class="btn btn-primary">Agregar</button>
+              </form>
+      
+            </div>
+            <div class="col-md-1"></div>
+          </div><!-- fin row -->
+          ...
+        </div><!--  fin modal-content -->
+      </div> <!-- fin modal-dialog -->
+    </div> <!-- fin modal -->
+
+    <div class="modal fade listar_empleado" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title text-center" id="exampleModalScrollableTitle">LISTA DE EMPLEADOS</h3>
+            <form class="form-inline my-2 my-lg-0 ml-5">
+              <input class="form-control mr-sm-2" type="search" placeholder="Búsqueda" aria-label="Search">
+              <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div><!-- fin header modal -->
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Documento</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Cargo</th>
+                <th scope="col">Detalles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">43252634</th>
+                <td>Alex Uriel Muñoz</td>
+                <td>alex@gmail.colm</td>
+                <td>4131343</td>
+                <td>Gerente administrativo</td>
+                <td class="text-center"><button class="btn btn-outline-primary">+</button></td>
+              </tr>
+              <tr>
+                <th scope="row">22344214</th>
+                <td>Jacob Roberto Rodriguez Marulanda</td>
+                <td>jroberto@gmail.com</td>
+                <td>4353454</td>
+                <td>Oficios generales</td>
+                <td class="text-center"><button class="btn btn-outline-primary">+</button></td>
+              </tr>
+              <tr>
+                <th scope="row">735345645</th>
+                <td>Larry Andrés Pérez Escobar</td>
+                <td>larryescoba@gmail.com</td>
+                <td>3134135323</td>
+                <td>Gerente general</td>
+                <td class="text-center"><button class="btn btn-outline-primary">+</button></td>
+              </tr>
+              <tr>
+                <th scope="row">234123412</th>
+                <td>Esteban González Arboleda</td>
+                <td>esteban1992@gmail.com</td>
+                <td>312341553</td>
+                <td>Asesor de Ventas</td>
+                <td class="text-center"><button class="btn btn-outline-primary">+</button></td>
+              </tr>
+              <tr>
+                <th scope="row">453454543</th>
+                <td>Enrique Segoviano</td>
+                <td>enriquesegoviano@hotmail.com</td>
+                <td>312341535</td>
+                <td>Cajero</td>
+                <td class="text-center"><button class="btn btn-outline-primary">+</button></td>
+              </tr>
+              <tr>
+                <th scope="row">574345645</th>
+                <td>Andrea Sánchez López</td>
+                <td>lanena@hotmail.es</td>
+                <td>3123526434</td>
+                <td>Relaciones Sociales</td>
+                <td class="text-center"><button class="btn btn-outline-primary">+</button></td>
+              </tr>
+              <tr>
+                <th scope="row">6534245</th>
+                <td>Juan Carlos López</td>
+                <td>jclopez@gmail.com</td>
+                <td>3134567575</td>
+                <td>Mensajero</td>
+                <td class="text-center"><button class="btn btn-outline-primary">+</button></td>
+              </tr>
+              <tr>
+                <th scope="row">73452345</th>
+                <td>Estefany Lara</td>
+                <td>estelara@gmail.com</td>
+                <td>2564754</td>
+                <td>Independiente</td>
+                <td class="text-center"><button class="btn btn-outline-primary">+</button></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <nav aria-label="text-center Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+              </ul>
+            </nav>
+        </div><!-- fin modal-content -->
+      </div> <!-- fin modal-dialog -->
+    </div> <!-- fin modal -->
+
+
+
+    
+    
+</body>
+</html>
