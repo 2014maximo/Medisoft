@@ -1,2 +1,3 @@
-# Medisoft
-Versión de esquemas del proyecto sin funcionalidades
+# Medisoftware
+
+Proyecto solo visual, no aplica funcionalidades
