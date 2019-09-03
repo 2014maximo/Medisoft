@@ -10,3 +10,13 @@ function administrador() {
     }
 }
 
+function web(){
+    window.open("vistas/web.html");
+}
+function web_intro(){
+    window.open("vistas/web.html");
+}
+function login(){
+    window.open("../index.html");
+}
+

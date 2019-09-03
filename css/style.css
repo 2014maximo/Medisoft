@@ -1,117 +1,172 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap');
 :root {
-    --color-uno: #333;
-    --font-one: 'Open Sans';
-    }
+  --color-uno: #333;
+  --color-two: #c0023a;
+  --color-three: #d6b469;
+  --font-one: "Open Sans";
+  --font-two: "Roboto";
+  --font-three: 'Oswald';
+}
 
-.backg{
-    background:url(../img/trigal.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.font-one {
+  font-family: var(--font-one);
 }
-body.backadmin{
-    background: url(../img/Administrador.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 600px;
+.font-two {
+  font-family: var(--font-two);
 }
-.font-one{
-    font-family: var(--font-one) !important;
+.font-three {
+  font-family: var(--font-three);
+  font-size: 1.5rem;
 }
-.c-pointer{
-    cursor: pointer;
+.tx1 {
+  color: var(--color-three);
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 30px;
+  text-shadow: 0px 2px 1px #fff;
 }
-a.c-pointer:hover{
-    background-color: #d6b469;
-    color:white !important;
+.formulario {
+  background: url(../img/trigal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.btn-somos {
+  background: var(--color-three);
+  border: 0px;
+  font-size: 1.5rem;
+  height: 50px;
+  font-weight: lighter;
+}
+.home{
+  cursor: pointer;
+}
+.menu-head{
+  display:flex;
+  list-style:none;
+  justify-content: space-around;
+  padding-top: 15px;
+
+}
+.menu-head a{
+  color: white;
+  text-decoration: none !important;
+}
+.menu-head a:hover{
+  color: var(--color-three)
+}
+.backg {
+  background: url(../img/trigal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body.backadmin {
+  background: url(../img/Administrador.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+.font-one {
+  font-family: var(--font-one) !important;
+}
+.text-a p {
+  line-height: 1rem;
+  margin: 0px;
+}
+.c-pointer {
+  cursor: pointer;
+}
+a.c-pointer:hover {
+  background-color: #d6b469;
+  color: white !important;
 }
 
 /* CALENDARIO */
 .calendar-day {
-    width: 100px;
-    min-width: 100px;
-    max-width: 100px;
-    height: 80px;
-  }
-  .calendar-table {
-    margin: 0 auto;
-    width: 700px;
-  }
-  .selected {
-    background-color: #eee;
-  }
-  .outside .date {
-    color: #ccc;
-  }
-  .timetitle {
-    white-space: nowrap;
-    text-align: right;
-  }
-  .event {
-    border-top: 1px solid #b2dba1;
-    border-bottom: 1px solid #b2dba1;
-    background-image: linear-gradient(to bottom, #dff0d8 0px, #c8e5bc 100%);
-    background-repeat: repeat-x;
-    color: #3c763d;
-    border-width: 1px;
-    font-size: .75em;
-    padding: 0 .75em;
-    line-height: 2em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: 1px;
-  }
-  .event.begin {
-    border-left: 1px solid #b2dba1;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
-  .event.end {
-    border-right: 1px solid #b2dba1;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
-  .event.all-day {
-    border-top: 1px solid #9acfea;
-    border-bottom: 1px solid #9acfea;
-    background-image: linear-gradient(to bottom, #d9edf7 0px, #b9def0 100%);
-    background-repeat: repeat-x;
-    color: #31708f;
-    border-width: 1px;
-  }
-  .event.all-day.begin {
-    border-left: 1px solid #9acfea;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
-  .event.all-day.end {
-    border-right: 1px solid #9acfea;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
-  .event.clear {
-    background: none;
-    border: 1px solid transparent;
-  }
-  .table-tight > thead > tr > th,
-  .table-tight > tbody > tr > th,
-  .table-tight > tfoot > tr > th,
-  .table-tight > thead > tr > td,
-  .table-tight > tbody > tr > td,
-  .table-tight > tfoot > tr > td {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .table-tight-vert > thead > tr > th,
-  .table-tight-vert > tbody > tr > th,
-  .table-tight-vert > tfoot > tr > th,
-  .table-tight-vert > thead > tr > td,
-  .table-tight-vert > tbody > tr > td,
-  .table-tight-vert > tfoot > tr > td {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  height: 80px;
+}
+.calendar-table {
+  margin: 0 auto;
+  width: 700px;
+}
+.selected {
+  background-color: #eee;
+}
+.outside .date {
+  color: #ccc;
+}
+.timetitle {
+  white-space: nowrap;
+  text-align: right;
+}
+.event {
+  border-top: 1px solid #b2dba1;
+  border-bottom: 1px solid #b2dba1;
+  background-image: linear-gradient(to bottom, #dff0d8 0px, #c8e5bc 100%);
+  background-repeat: repeat-x;
+  color: #3c763d;
+  border-width: 1px;
+  font-size: 0.75em;
+  padding: 0 0.75em;
+  line-height: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1px;
+}
+.event.begin {
+  border-left: 1px solid #b2dba1;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.event.end {
+  border-right: 1px solid #b2dba1;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.event.all-day {
+  border-top: 1px solid #9acfea;
+  border-bottom: 1px solid #9acfea;
+  background-image: linear-gradient(to bottom, #d9edf7 0px, #b9def0 100%);
+  background-repeat: repeat-x;
+  color: #31708f;
+  border-width: 1px;
+}
+.event.all-day.begin {
+  border-left: 1px solid #9acfea;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.event.all-day.end {
+  border-right: 1px solid #9acfea;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.event.clear {
+  background: none;
+  border: 1px solid transparent;
+}
+.table-tight > thead > tr > th,
+.table-tight > tbody > tr > th,
+.table-tight > tfoot > tr > th,
+.table-tight > thead > tr > td,
+.table-tight > tbody > tr > td,
+.table-tight > tfoot > tr > td {
+  padding-left: 0;
+  padding-right: 0;
+}
+.table-tight-vert > thead > tr > th,
+.table-tight-vert > tbody > tr > th,
+.table-tight-vert > tfoot > tr > th,
+.table-tight-vert > thead > tr > td,
+.table-tight-vert > tbody > tr > td,
+.table-tight-vert > tfoot > tr > td {
+  padding-top: 0;
+  padding-bottom: 0;
+}
