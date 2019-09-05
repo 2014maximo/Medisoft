@@ -1,16 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap");
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap");
 :root {
   --color-uno: #333;
   --color-two: #c0023a;
   --color-three: #d6b469;
   --font-one: "Open Sans";
   --font-two: "Roboto";
-  --font-three: 'Oswald';
+  --font-three: "Oswald";
+  --font-four: "Kaushan Script";
+  --font-five: "Open Sans Condensed";
 }
-
+.color-one{
+  background:#343a40;
+}
+#light{
+  display:none;
+}
 .font-one {
   font-family: var(--font-one);
 }
@@ -20,6 +29,18 @@
 .font-three {
   font-family: var(--font-three);
   font-size: 1.5rem;
+}
+.font-four {
+  font-family: var(--font-four);
+  font-size: 1.5rem;
+}
+.font-four {
+  font-family: var(--font-five);
+  font-size: 1.2rem;
+}
+.title-one {
+  font-family: var(--font-four);
+  font-size: 3rem;
 }
 .tx1 {
   color: var(--color-three);
@@ -41,28 +62,73 @@
   height: 50px;
   font-weight: lighter;
 }
-.home{
+.home {
   cursor: pointer;
 }
-.menu-head{
-  display:flex;
-  list-style:none;
+.menu-head {
+  display: flex;
+  list-style: none;
   justify-content: space-around;
   padding-top: 15px;
-
 }
-.menu-head a{
+.item-header:hover{
+  color:black;
+  text-shadow: 2px 0px 2px white;
+}
+.item-header{
+  cursor: pointer;
+  color:white
+}
+.menu-head a {
   color: white;
   text-decoration: none !important;
 }
-.menu-head a:hover{
-  color: var(--color-three)
+.menu-head a:hover {
+  color:black;
+  text-shadow: 2px 0px 2px white;
 }
 .backg {
   background: url(../img/trigal.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
+/* DROPDOWN */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
 body.backadmin {
   background: url(../img/Administrador.jpg);
   background-size: cover;
@@ -76,6 +142,12 @@ body.backadmin {
   line-height: 1rem;
   margin: 0px;
 }
+
+.bloque-login{
+  background: rgba(255,255,255, 0.5);
+  border-radius: 20px;
+}
+
 .c-pointer {
   cursor: pointer;
 }
